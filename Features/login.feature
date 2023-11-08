@@ -10,6 +10,15 @@ Feature: Login Feature
     And click on login 
     Then verify the the title of page is "SeatPlan | Book the Best Theatre Tickets by Seat View"
     Then close the driver
+    
+   @login
+   Scenario: logging in the application
+    Given open the chrome browser
+    And enter the url "https://uat.seatplan.com"
+    And enter the username "dev"
+    And enter the password "devils"
+    And click on login 
+    
   
   @DataDriven
   Scenario Outline: i want login the application with different login credentials Data Driven

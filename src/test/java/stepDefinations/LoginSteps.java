@@ -1,20 +1,13 @@
 package stepDefinations;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pageObjects.Login;
 import pageObjects.footersPage;
-import org.openqa.selenium.Keys;
 
 public class LoginSteps {
 
@@ -126,5 +119,22 @@ public class LoginSteps {
 		fp.check_a_google_map_is_embed_displays_the_location_of_the_venue();
 	}
 	
+		//************************* Search Test Venue And Production****************//
+	
+	@Then("Selecting a search result will take you to the relevant production")
+	public void Selecting_a_search_result_will_take_you_to_the_relevant_production()
+	{
+		fp.Selecting_a_search_result_will_take_you_to_the_relevant_production();
+	}
 
+		//*************************Ticketing calendar**********************//
+	
+	@Given("Navigate to production page")
+	public void Navigate_to_production_page () {
+	   
+		
+	}
+
+	
+	
 }
