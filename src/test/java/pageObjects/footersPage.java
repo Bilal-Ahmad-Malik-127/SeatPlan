@@ -1,10 +1,8 @@
 package pageObjects;
 
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -84,5 +82,15 @@ public class footersPage {
 		PageFactory.initElements(driver, this);
 		action = new Actions(driver);
 
+	}
+	
+	//*************************Search***********************//
+	
+	public void Selecting_a_search_result_will_take_you_to_the_relevant_production()
+	{
+		for (int i = 0; i <4; i++) {
+		    action.sendKeys(Keys.DOWN);
+		}
+		action.sendKeys(Keys.ENTER).perform();
 	}
 }
