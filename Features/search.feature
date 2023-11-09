@@ -1,5 +1,5 @@
 Feature:  Users can only search for productions or venues
- @searchVenue
+  @searchVenue
   Scenario: Users can only search for productions or venues
   	Selecting an autocomplete option will take you to the relevant production or venue page
     
@@ -13,7 +13,8 @@ Feature:  Users can only search for productions or venues
     Then verify the the title of page is "London Palladium Events & Tickets 2023-2024"
     Then close the driver
     
-  @searchProduction
+    
+   @searchProduction
     Scenario: Users can only search for productions
   	Selecting a search result will take you to the relevant production
     Given open the chrome browser
