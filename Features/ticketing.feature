@@ -8,7 +8,7 @@
     And click on login 
     Then Navigate to production page
     And Ability to change month using month selector 
-   
+   Then close the driver
    @DateTimeIcon
    Scenario: Availibility of time, price, indicator on the top left of each card
     Given open the chrome browser
@@ -19,3 +19,4 @@
     Then Navigate to production page
     And Availibility of time, price, indicator on the top left of each card
 		And Selecting a performance will take a user to the ticketing seat map for the date and time selected
+		Then close the driver

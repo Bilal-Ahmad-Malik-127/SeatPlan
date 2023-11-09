@@ -35,6 +35,15 @@ public class Login {
       //Assert.assertTrue(driver.getPageSource().contains(title)); 
 		
 	}
+	public void verifyTitleOfPageIsNot(String title)
+	{
+		System.out.println(title+" ");
+		
+		Assert.assertNotEquals(title,driver.getTitle());
+		/** Getting failed because the & is written in the form of &amp character */
+      //Assert.assertTrue(driver.getPageSource().contains(title)); 
+		
+	}
 	public Login(WebDriver d)
 	{
 		driver=d;

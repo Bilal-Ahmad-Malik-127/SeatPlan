@@ -10,7 +10,7 @@
     And enter the password "devils"
     And click on login 
     Then click on About 
-    Then verify the the title of page is "About Us and ie  | SeatPlan"
+    Then verify the the title of page is "About Us | SeatPlan"
     Then close the driver
  
   @hello
@@ -45,7 +45,7 @@ Scenario: To check Competations link is present on the webpage and it is working
     Then verify the the title of page is "Competitions & Giveaways - Win theatre vouchers and more | SeatPlan"
     Then close the driver
    
-  
+  @backstage
    Scenario: Backstage is the SeatPlan blog. Theres a blog listing page that displays a list of blog posts and then there are blog post pages displaying the blog content.
     Given open the chrome browser
     And enter the url "https://uat.seatplan.com"

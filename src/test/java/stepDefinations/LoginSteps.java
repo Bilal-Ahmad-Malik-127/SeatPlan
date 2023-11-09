@@ -56,6 +56,11 @@ public class LoginSteps {
 		lp.verifyTitle(string);
 
 	}
+	
+	@Then("verify the the title of page is not {string}")
+	public void verify_the_the_title_of_page_is_not(String string) {
+		lp.verifyTitleOfPageIsNot(string);
+	}
 
 	@Then("close the driver")
 	public void closeDriver() {

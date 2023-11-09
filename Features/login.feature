@@ -27,10 +27,11 @@ Feature: Login Feature
     And enter the username <user>
     And enter the password <pass>
     And click on login 
-    Then verify the the title of page is "SeatPlan | Book the Best Theatre Tickets by Seat View"
+    Then verify the the title of page is not "SeatPlan | Book the Best Theatre Tickets by Seat View"
     Then close the driver
     Examples:
     |user             |pass|
     |"dev"            |"devils1"|
     |"adminnew"				|"admin2new"|
-    |"dev"					  |"devils"|
+    |"Dev"					  |"Devilss"|
+    |"devils"         |"dev"|

@@ -13,9 +13,8 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome=false,
 		plugin= {"pretty","html:test-output.html"
 				},
-		publish=false,
-		tags= "@DateTimeIcon"
-
+		publish=false
+		
 		)
 		
 public class TestRun {
