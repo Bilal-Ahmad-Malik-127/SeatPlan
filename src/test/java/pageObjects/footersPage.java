@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,6 +34,32 @@ public class footersPage {
 	
 	@FindBy(xpath="//div[@class='info-blocks__item'][2]")
 	WebElement map;
+	
+	@FindBy(xpath="//*[@alt='Hamilton']")
+	WebElement production;
+	
+	@FindBy(xpath="//*[@class='button button-primary production-right-panel__btn']")
+	WebElement ticket;
+	
+	@FindBy(id="production-month-year")
+	WebElement month;
+	
+	@FindBy(xpath="//*[@id=\"calendar-wrapper\"]/ul[2]/li[4]/div/div[2]/a[1]/span")
+	WebElement availibility;
+	
+	@FindBy(xpath="//*[@id=\"calendar-wrapper\"]/ul[2]/li[4]/div/div[2]/a[1]/em")
+	WebElement time;
+	
+	@FindBy(xpath="//div[@id='calendar-wrapper']//ul[@class='calendar-row'][1]//li[4]//span[@class='cal-day-number']")
+	WebElement date;
+	
+	@FindBy(xpath="//div[@id='calendar-wrapper']//ul[@class='calendar-row'][1]//li[4]//a[1]")
+	WebElement ticketnav;
+	
+	
+	
+	
+	
 
 	public void click_on_about() {
 		about.click();
@@ -93,4 +121,43 @@ public class footersPage {
 		}
 		action.sendKeys(Keys.ENTER).perform();
 	}
+	
+	//************************Start of Ticketing calendar****//
+	//************************Production page****************//
+	
+	public void Navigate_to_production_page () 
+	{
+		   production.click();
+		   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		   ticket.click();
+	}
+	
+	//************************Production Month Change****************//
+	
+	public void Ability_to_change_month_using_month_selector() 
+	{
+		month.click();
+		action.sendKeys(Keys.DOWN);
+		action.sendKeys(Keys.ENTER).perform();
+	}
+	
+	//************************ Availability of Date Time and Indicator****************//
+
+	public void Availibility_of_time_price_indicator_on_the_top_left_of_each_card()
+	{
+		availibility.isDisplayed();
+		time.isDisplayed();
+		date.isDisplayed();
+	
+	}
+	
+	public void Selecting_a_performance_will_take_a_user_to_the_ticketingseat_map_for_the_date_and_time_selected()
+	{
+		ticketnav.click();
+	}
+				//************************End of Ticketing calendar****************//
+	
+	
+
+
 }
