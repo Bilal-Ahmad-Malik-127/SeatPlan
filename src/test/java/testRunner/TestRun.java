@@ -9,14 +9,15 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features=".//Features",
 		glue="stepDefinations",
-		tags=("@hello"),
-		dryRun=true,
+		dryRun=false,
 		monochrome=false,
 		plugin= {"pretty","html:test-output.html"
-				}
-		
+				},
+		publish=false,
+		tags= "@DateTimeIcon"
+
 		)
 		
 public class TestRun {
 
-}
+} 

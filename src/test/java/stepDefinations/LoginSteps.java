@@ -1,8 +1,13 @@
 package stepDefinations;
 
+import static org.testng.Assert.assertEquals;
+
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,13 +16,17 @@ import pageObjects.footersPage;
 
 public class LoginSteps {
 
-	WebDriver driver = new ChromeDriver();;
+	WebDriver driver ;
 	Login lp;
 	footersPage fp;
+	
 
+   
 	@Given("open the chrome browser")
 	public void open_the_chrome_browese() {
+		driver= new ChromeDriver();
 		lp = new Login(driver);
+		System.out.println("open chrome");
 
 	}
 
@@ -128,11 +137,35 @@ public class LoginSteps {
 	}
 
 		//*************************Ticketing calendar**********************//
-	
-	@Given("Navigate to production page")
-	public void Navigate_to_production_page () {
-	   
 		
+	
+	@Then("Navigate to production page")
+	public void Navigate_to_production_page () {
+	//System.out.println(driver);
+	//	System.out.println("Navigate");
+		fp= new footersPage(driver);
+		fp.Navigate_to_production_page();
+		
+	}
+	
+	@And("Ability to change month using month selector")
+	public void Ability_to_change_month_using_month_selector() 
+	{
+		fp.Ability_to_change_month_using_month_selector();
+	}
+	
+	@And("Availibility of time, price, indicator on the top left of each card")
+	public void Availibility_of_time_price_indicator_on_the_top_left_of_each_card()
+	{
+		fp.Availibility_of_time_price_indicator_on_the_top_left_of_each_card();
+	}
+	
+	@And("Selecting a performance will take a user to the ticketing seat map for the date and time selected")
+	public void Selecting_a_performance_will_take_a_user_to_the_ticketingseat_map_for_the_date_and_time_selected()
+	{
+		fp.Selecting_a_performance_will_take_a_user_to_the_ticketingseat_map_for_the_date_and_time_selected();
+		
+		Assert.assertEquals(driver.getTitle(), "Select Seat | 2:30pm 9th Nov | Hamilton Tickets | London Theatre | SeatPlan");
 	}
 
 	
