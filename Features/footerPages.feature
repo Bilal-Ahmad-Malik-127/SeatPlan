@@ -2,7 +2,7 @@
  @footers
  Feature: I want to see Company pages display static content about the company
  
-
+ @hello
   Scenario: To check About link is present on the webpage and it is working
    Given open the chrome browser
     And enter the url "https://uat.seatplan.com"
@@ -13,7 +13,7 @@
     Then verify the the title of page is "About Us and ie  | SeatPlan"
     Then close the driver
  
-  
+  @hello
   Scenario: To check FAQ link is present on the webpage and it is working
    Given open the chrome browser
     And enter the url "https://uat.seatplan.com"

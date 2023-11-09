@@ -9,17 +9,14 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features=".//Features",
 		glue="stepDefinations",
+		tags=("@hello"),
 		dryRun=true,
 		monochrome=false,
 		plugin= {"pretty","html:test-output.html"
-				},
-<<<<<<< HEAD
-		publish=true
-=======
-		publish=true,
-		tags="@TicketingCalendar" 
->>>>>>> 13dc9aa65dc16b918ee00f3950f60b89cfbd905e
+				}
+		
 		)
+		
 public class TestRun {
 
 }
